@@ -1,0 +1,20 @@
+{
+  "name": "fundraising-learnings-presentation",
+  "version": "1.0.0",
+  "description": "A presentation about what I learnt from the fundraisng development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-html": "pug -o build src/pug/index.pug",
+    "build-resources": "cp -r src/js build && cp -r src/css build && cp -r src/lib build && cp -r src/img build && cp -r src/plugin build",
+    "build": "npm build-resources && npm build-html",
+    "watch": "pug -w -P -o build src/pug/index.pug"
+  },
+  "private": true,
+  "author": "Gabriel Birke <gb@birke-software.de>",
+  "license": "CC-BY-SA-4.0",
+  "dependencies": {
+    "pug": "^2.0.0-beta5",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

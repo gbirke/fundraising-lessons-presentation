@@ -1,0 +1,92 @@
+extends ./layout.pug
+
+block content
+
+	section
+		h2 Learnings from the development of the the new fundraising frontend application
+
+	section
+		h2 What is this about?
+		ul
+			li.fragment Organization Perspective
+			li.fragment Coding Perspective
+			
+	section
+		h2 Our working mode
+		ul
+			li.fragment Define User stories/Use cases
+			li.fragment Estimate each story as an epic
+			li.fragment Work on each story, breaking down into smaller stories as needed
+			li.fragment Tasks are picked from the big board
+			li.fragment No sprints, one big burndown chart
+		
+	section
+		h3 Problem
+		p Burndown chart based on rough story estimates is highly unreliable
+		.fragment
+			h3 Solution
+			ul
+				li Distribute stories to milestones (2-4 weeks)
+				li Break down stories into tasks for current milestone
+				li Separate burndown chart(s) for each milestone
+		aside.notes
+			p Milestones also help with celebrating/appreciating progress
+			p Mention that we had three "Milestones" (campaign-ready, feature parity and "new stuff") - way too broad.
+		
+	section
+		h3 Problem
+		p Use cases describe functionality and neglect "infrastructure" effort
+		.fragment 
+			h3 Solution
+			p Keep infrastructure concerns in mind when creating tasks.
+			ul
+				li Database
+				li Web request handling (routing)
+				li Validation
+				li Internationalization and Localization
+				li External services
+				li Logging
+				
+	section
+		h2 Communication
+		ul
+			li Task board (who does what)
+			li Code reviews
+			li Sporadic dailies 
+			li In-Person for planning and WTF moments during code review
+		p 
+			strong Lesson: 
+			| "Distributed" teams can work well
+		aside.notes "Distributed" can not only mean 
+		
+	section
+		h2 Review-First policy
+		p: strong Before working on your code, always check if code needs to be reviewed!
+		
+	section
+		h2 More lines, less cleverness
+		p What is better, this
+		pre: code
+			| foreach ( ['name', 'street', 'zip', 'city', 'email' ] as $field ) {
+			|	$setter = 'set' . ucfirst( $field )
+			| 	$address->$setter( $_REQUEST[$field] );
+			| }
+		p or this
+		pre: code
+			| $address->setName( $_REQUEST['name'] );
+			| $address->setStreet( $_REQUEST['street'] );
+			| $address->setZip( $_REQUEST['zip'] );
+			| $address->setCity( $_REQUEST['city'] );
+			| $address->setEmail( $_REQUEST['email'] );
+		aside.notes The latter is better because it eases refactoring (renaming of settings in the address object) and decouples HTML forms fields from entity field names. 
+		
+	section
+		h2 Continous integration
+		p For every pull request, do the following checks
+		ul
+			li Coding style
+			li Unit tests
+			li Code metrics
+		p Check both PHP and JavaScript code!
+		
+			
