@@ -8,12 +8,14 @@
     "build-html": "pug -o build src/pug/index.pug",
     "build-resources": "cp -r src/js build && cp -r src/css build && cp -r src/lib build && cp -r src/img build && cp -r src/plugin build",
     "build": "npm build-resources && npm build-html",
-    "watch": "pug -w -P -o build src/pug/index.pug"
+    "watch": "pug -w -P -o build src/pug/index.pug",
+    "deploy": "gh-pages -d build"
   },
   "private": true,
   "author": "Gabriel Birke <gb@birke-software.de>",
   "license": "CC-BY-SA-4.0",
   "dependencies": {
+    "gh-pages": "^0.11.0",
     "pug": "^2.0.0-beta5",
     "pug-cli": "^1.0.0-alpha6"
   }
