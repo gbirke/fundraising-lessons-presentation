@@ -6,62 +6,95 @@ block content
 		h2 Learnings from the development of the the new fundraising frontend application
 
 	section
-		h2 What is this about?
+		h2 Topics
 		ul
-			li.fragment Organization Perspective
-			li.fragment Coding Perspective
+			li.fragment Our planning
+			li.fragment Our working mode
+			li.fragment Things we learnt when coding
 			
+	section
+		h2 Our Planning
+		ul
+			li.fragment Define Use cases
+			li.fragment Estimate each story as an epic
+			li.fragment Rough Milestones: Campaign-Ready, Feature-Parity, "New Stuff"
+		aside.notes Describe difference between user story and use case. The story "user wants to donate" is implemented in 3-4 use cases: Show donation form, add donation, display donation result, Paypal notification
+
 	section
 		h2 Our working mode
 		ul
-			li.fragment Define User stories/Use cases
-			li.fragment Estimate each story as an epic
-			li.fragment Work on each story, breaking down into smaller stories as needed
-			li.fragment Tasks are picked from the big board
+			li.fragment Work on each story, breaking it down into smaller tasks as needed
+			li.fragment Tasks are picked from the board
 			li.fragment No sprints, one big burndown chart
 		
 	section
-		h3 Problem
-		p Burndown chart based on rough story estimates is highly unreliable
-		.fragment
-			h3 Solution
-			ul
-				li Distribute stories to milestones (2-4 weeks)
-				li Break down stories into tasks for current milestone
-				li Separate burndown chart(s) for each milestone
-		aside.notes
-			p Milestones also help with celebrating/appreciating progress
-			p Mention that we had three "Milestones" (campaign-ready, feature parity and "new stuff") - way too broad.
-		
+		h2 Learning
+		p Progress tracking based on rough story estimates is highly unreliable.
+		p: img.fragment(src="img/youdontsay.png", height=400)
+	
 	section
-		h3 Problem
-		p Use cases describe functionality and neglect "infrastructure" effort
-		.fragment 
-			h3 Solution
-			p Keep infrastructure concerns in mind when creating tasks.
-			ul
+		section
+			h2 Learning
+			p Use cases describe functionality and neglect "infrastructure" effort
+			p.fragment Keep infrastructure concerns in mind when breaking down tasks and create separate tickets for them
+		
+		section
+			h3 Typical infrastructure concerns?
+			ul.fragment
 				li Database
 				li Web request handling (routing)
 				li Validation
 				li Internationalization and Localization
 				li External services
 				li Logging
+				li Deployment
+
+	section
+		// TODO Add nice "Celebration" background?
+		h2 When to celebrate?
+		aside.notes Talk about feeling of "not making progress". Sprints have builtin "celebration points".
+	
+	section
+		h2 Solutions?
+		ul
+			li.fragment Distribute stories to more milestones?
+			li.fragment ???
 				
 	section
 		h2 Communication
 		ul
-			li Task board (who does what)
+			li Task board 
 			li Code reviews
 			li Sporadic dailies 
 			li In-Person for planning and WTF moments during code review
-		p 
+		p.fragment 
 			strong Lesson: 
-			| "Distributed" teams can work well
-		aside.notes "Distributed" can not only mean 
+			| "Distributed" teams can work well and can self-organize/priotitize
+		aside.notes "Distributed" means not working in the same place or at the same time
 		
 	section
-		h2 Review-First policy
+		h2 Encourage shared commitment.
+		p Work on big tasks (e.g. use cases or other big todos) with more than one person. 
+		.fragment
+			h3 Advantages
+			ul
+				li knowledge sharing
+				li improve and increase interpersonal communication
+				li have a better sense of achievement and progress (by not working in parallalel)
+
+		
+	section
+		h2 Don't be a lone explorer
+		p When trying out "new stuff" (eg. new patterns, libraries or languages), learn together.
+		aside.notes That means to do pair programming, intensive reviews and demos.
+		
+	section
+		h2 Review-First
 		p: strong Before working on your code, always check if code needs to be reviewed!
+		
+	section
+		h2 Use code for reviews
+		aside.notes Make followup-PRs instead of commenting. 
 		
 	section
 		h2 More lines, less cleverness
@@ -81,12 +114,12 @@ block content
 		aside.notes The latter is better because it eases refactoring (renaming of settings in the address object) and decouples HTML forms fields from entity field names. 
 		
 	section
-		h2 Continous integration
+		h2 Continous integration/deployment
 		p For every pull request, do the following checks
 		ul
 			li Coding style
-			li Unit tests
+			li All the tests (Unit/Integration/System, etc)
 			li Code metrics
 		p Check both PHP and JavaScript code!
-		
+		p Master is always clean and deployable.
 			
