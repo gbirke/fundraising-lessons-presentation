@@ -137,12 +137,14 @@ block content
 			h1 Verbosity is allowed
 	
 		section
+			h3 Terse
 			pre: code
 				| foreach ( ['name', 'street', 'zip', 'city', 'email' ] as $field ) {
 				|	$setter = 'set' . ucfirst( $field )
 				| 	$address->$setter( $_REQUEST[$field] );
 				| }
 		section
+			h3 Verbose
 			pre: code
 				| $address->setName( $_REQUEST['name'] );
 				| $address->setStreet( $_REQUEST['street'] );
@@ -158,6 +160,9 @@ block content
 				li less errors from mismatched types
 				li easier refactoring
 				li less docstrings
+
+	section
+		h1 Outcome
 
 	section
 		h1 Was it worth it?
