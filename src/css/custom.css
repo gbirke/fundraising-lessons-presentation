@@ -1,0 +1,16 @@
+/* Customizations that should rather go into a new theme, but for now they're here */
+.reveal ul.blocks {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin:0;
+}
+
+.reveal ul.blocks li {
+    padding: .5em 1em;
+    margin: 0.5em 5em;
+    background-color: rgba(0,0,0,.1);
+    flex: 1;
+    text-align:center;
+}

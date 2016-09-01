@@ -5,6 +5,7 @@ html
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 		link(rel='stylesheet', href='css/reveal.css')
 		link(rel='stylesheet', href='css/theme/solarized.css')
+		link(rel='stylesheet', href='css/custom.css')
 		link(rel='stylesheet' href='lib/css/zenburn.css')
 		block title
 			title Learnings from our development of the WMDE fundraising application
@@ -17,6 +18,7 @@ html
 		script(src='js/reveal.js')
 		script.
 			Reveal.initialize( {
+				width:1280,
 				history: true,
 				dependencies: [
 					{ src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
