@@ -1,7 +1,7 @@
 {
   "name": "fundraising-learnings-presentation",
   "version": "1.0.0",
-  "description": "A presentation about what I learnt from the fundraisng development",
+  "description": "A presentation about what the team learnt from the fundraising development",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
