@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/solarized.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <title>Learnings from our development of the WMDE fundraising application</title>
   </head>
@@ -12,43 +13,61 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h2>Learnings from the development of the the new fundraising frontend application</h2>
+          <h1>Learnings from the development of the the new fundraising frontend application</h1>
         </section>
+        <aside class="notes">
+          <p>These are the collected learnings of the team.</p>
+        </aside>
         <section>
-          <h2>Topics</h2>
-          <ul>
-            <li class="fragment">Our planning</li>
-            <li class="fragment">Our working mode</li>
-            <li class="fragment">Things we learnt when coding</li>
+          <h1>Topics</h1>
+          <ul class="blocks">
+            <li>Our planning</li>
+            <li>Our working mode</li>
+            <li>Things we learnt when coding</li>
+            <li>Outcome</li>
           </ul>
         </section>
         <section>
-          <h2>Our Planning</h2>
-          <ul>
-            <li class="fragment">Define Use cases</li>
-            <li class="fragment">Estimate each story as an epic</li>
-            <li class="fragment">Rough Milestones: Campaign-Ready, Feature-Parity, "New Stuff"</li>
-          </ul>
-          <aside class="notes">Describe difference between user story and use case. The story "user wants to donate" is implemented in 3-4 use cases: Show donation form, add donation, display donation result, Paypal notification</aside>
+          <h1>Planning</h1>
         </section>
         <section>
-          <h2>Our working mode</h2>
-          <ul>
-            <li class="fragment">Work on each story, breaking it down into smaller tasks as needed</li>
-            <li class="fragment">Tasks are picked from the board</li>
-            <li class="fragment">No sprints, one big burndown chart</li>
-          </ul>
+          <h1>Use cases</h1>
+          <aside class="notes"> 
+            <p>Describe difference between user story and use case. The story "user wants to donate" is implemented in 3-4 use cases: Show donation form, add donation, display donation result, Paypal notification</p>
+          </aside>
         </section>
         <section>
-          <h2>Learning</h2>
-          <p>Progress tracking based on rough story estimates is highly unreliable.</p>
-          <p><img class="fragment" src="img/youdontsay.png" height="400"></p>
+          <h1>Complexity extimates</h1>
+        </section>
+        <section>
+          <h1>Milestones</h1>
+          <aside class="notes">
+            <p>Campaign-Ready, Feature-Parity, "New Stuff"</p>
+          </aside>
+        </section>
+        <section>
+          <h1>Working mode</h1>
+          <aside class="notes">
+            <ul>
+              <li>Break stories down into smaller tasks as needed</li>
+              <li>Tasks are picked from the board</li>
+              <li>No sprints, one big burndown chart, that got adjusted during the project</li>
+            </ul>
+          </aside>
         </section>
         <section>
           <section>
             <h2>Learning</h2>
-            <p>Use cases describe functionality and neglect "infrastructure" effort</p>
-            <p class="fragment">Keep infrastructure concerns in mind when breaking down tasks and create separate tickets for them</p>
+            <p>Progress tracking based on rough story estimates is highly unreliable.</p>
+          </section>
+          <section>
+            <p><img src="img/youdontsay.png" height="400"></p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Learning</h2>
+            <p>Use cases describe functionality and neglect "infrastructure" effort.</p>
           </section>
           <section>
             <h3>Typical infrastructure concerns?</h3>
@@ -62,80 +81,166 @@
               <li>Deployment</li>
             </ul>
           </section>
+          <section>
+            <h2>Possible solution</h2>
+            <p>Keep infrastructure concerns in mind when breaking down tasks and create separate tickets for them.</p>
+          </section>
         </section>
         <section>
           <!-- TODO Add nice "Celebration" background?-->
-          <h2>When to celebrate?</h2>
-          <aside class="notes">Talk about feeling of "not making progress". Sprints have builtin "celebration points".</aside>
+          <section> 
+            <h2>Learning</h2>
+            <p>Some people like regular celebration of progress.</p>
+            <aside class="notes">Talk about feeling of "not making progress". Sprints have builtin "celebration points".</aside>
+          </section>
+          <section>
+            <h1>Solutions?</h1>
+            <aside class="notes">
+              <p>Distribute stories to more milestones?</p>
+              <p>Pseudo-Sprints?</p>
+            </aside>
+          </section>
         </section>
         <section>
-          <h2>Solutions?</h2>
-          <ul>
-            <li class="fragment">Distribute stories to more milestones?</li>
-            <li class="fragment">???</li>
-          </ul>
+          <h1>Communication</h1>
+          <table>
+            <tr>
+              <th>Task board</th>
+              <td>daily</td>
+            </tr>
+            <tr>
+              <th>Code review</th>
+              <td>daily</td>
+            </tr>
+            <tr>
+              <th>"Daily" meeting</th>
+              <td>2-3 per week</td>
+            </tr>
+            <tr>
+              <th>In-person / Pair programming</th>
+              <td>rarely</td>
+            </tr>
+          </table>
+          <aside class="notes">
+            <p>This mode suited our peferred communication style and needs, other teams mqay have different needs.</p>
+          </aside>
         </section>
         <section>
-          <h2>Communication</h2>
-          <ul>
-            <li>Task board </li>
-            <li>Code reviews</li>
-            <li>Sporadic dailies </li>
-            <li>In-Person for planning and WTF moments during code review</li>
-          </ul>
-          <p class="fragment"> <strong>Lesson: </strong>"Distributed" teams can work well and can self-organize/priotitize</p>
+          <h2>Learning</h2>
+          <p>"Distributed" teams can work well and can self-organize/prioritize.</p>
           <aside class="notes">"Distributed" means not working in the same place or at the same time</aside>
         </section>
         <section>
-          <h2>Encourage shared commitment.</h2>
-          <p>Work on big tasks (e.g. use cases or other big todos) with more than one person. </p>
-          <div class="fragment">
+          <h1>The collaboration commandments</h1>
+          <aside class="notes">They're more of a suggestion, really ;-)</aside>
+        </section>
+        <section>
+          <h1>Encourage shared commitment</h1>
+          <aside class="notes">
+            <p>Shared Commitment = Work on big tasks (e.g. use cases or other big todos) with more than one person.</p>
             <h3>Advantages</h3>
             <ul>
               <li>knowledge sharing</li>
               <li>improve and increase interpersonal communication</li>
               <li>have a better sense of achievement and progress (by not working in parallalel)</li>
             </ul>
-          </div>
+          </aside>
         </section>
         <section>
-          <h2>Don't be a lone explorer</h2>
-          <p>When trying out "new stuff" (eg. new patterns, libraries or languages), learn together.</p>
-          <aside class="notes">That means to do pair programming, intensive reviews and demos.</aside>
+          <h1>Don't be a lone explorer</h1>
+          <aside class="notes"> 
+            <p>When trying out "new stuff" (eg. new patterns, libraries or languages), learn together.</p>
+            <p>Do pair programming, intensive reviews, workshops and demos.</p>
+            <p>More Ideas?</p>
+          </aside>
         </section>
         <section>
-          <h2>Review-First</h2>
-          <p><strong>Before working on your code, always check if code needs to be reviewed!</strong></p>
+          <h1>Review-First</h1>
+          <aside class="notes">
+            <p>Before working on your code, always check there's other code to be reviewed.</p>
+          </aside>
         </section>
         <section>
-          <h2>Use code for reviews</h2>
-          <aside class="notes">Make followup-PRs instead of commenting. </aside>
+          <h1>Use code for reviews</h1>
+          <aside class="notes">Make followup-PRs instead of commenting.</aside>
         </section>
         <section>
-          <h2>More lines, less cleverness</h2>
-          <p>What is better, this</p>
-          <pre><code>foreach ( ['name', 'street', 'zip', 'city', 'email' ] as $field ) {
+          <section>
+            <h1>Verbosity is allowed</h1>
+          </section>
+          <section>
+            <h3>Terse</h3>
+            <pre><code>foreach ( ['name', 'street', 'zip', 'city', 'email' ] as $field ) {
 	$setter = 'set' . ucfirst( $field )
 	$address->$setter( $_REQUEST[$field] );
 }</code></pre>
-          <p>or this</p>
-          <pre><code>$address->setName( $_REQUEST['name'] );
+          </section>
+          <section>
+            <h3>Verbose</h3>
+            <pre><code>$address->setName( $_REQUEST['name'] );
 $address->setStreet( $_REQUEST['street'] );
 $address->setZip( $_REQUEST['zip'] );
 $address->setCity( $_REQUEST['city'] );
 $address->setEmail( $_REQUEST['email'] );</code></pre>
-          <aside class="notes">The latter is better because it eases refactoring (renaming of settings in the address object) and decouples HTML forms fields from entity field names. </aside>
+            <aside class="notes">The latter is better because it eases refactoring (renaming of settings in the address object) and decouples HTML forms fields from entity field names.</aside>
+          </section>
         </section>
         <section>
-          <h2>Continous integration/deployment</h2>
-          <p>For every pull request, do the following checks</p>
-          <ul>
-            <li>Coding style</li>
-            <li>All the tests (Unit/Integration/System, etc)</li>
-            <li>Code metrics</li>
-          </ul>
-          <p>Check both PHP and JavaScript code!</p>
-          <p>Master is always clean and deployable.</p>
+          <h1>PHP 7.0 Type Hints!</h1>
+          <aside class="notes">
+            <ul>
+              <li>less errors from mismatched types</li>
+              <li>easier refactoring</li>
+              <li>less docstrings</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <h1>Outcome</h1>
+        </section>
+        <section>
+          <h1>Was it worth it?</h1>
+        </section>
+        <section>
+          <h1>Line count</h1>
+          <table>
+            <tr> 
+              <td>&nbsp;</td>
+              <th align="right">Before</th>
+              <th align="right">After</th>
+            </tr>
+            <tr>
+              <th>Classes</th>
+              <td align="right">68</td>
+              <td align="right">214</td>
+            </tr>
+            <tr>
+              <th>LOC</th>
+              <td align="right">14&numsp;503</td>
+              <td align="right">13&numsp;938</td>
+            </tr>
+            <tr> 
+              <th>LLOC</th>
+              <td align="right">4&numsp;734</td>
+              <td align="right">4&numsp;161</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>PHPMetrics Maintainability</h2>
+          <div class="metrics-blocks">
+            <div class="metrics-old">
+              <h4>Before</h4><img src="img/phpmetric-maintainability-old.svg">
+            </div>
+            <div class="metrics-new">
+              <h4>After</h4><img src="img/phpmetric-maintainability-new.svg">
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>Questions?</h1>
+          <p></p>
+          <p> <a href="https://gbirke.github.io/fundraising-lessons-presentation/">https://gbirke.github.io/fundraising-lessons-presentation/</a></p>
         </section>
       </div>
     </div>
@@ -143,9 +248,11 @@ $address->setEmail( $_REQUEST['email'] );</code></pre>
     <script src="js/reveal.js"></script>
     <script>
       Reveal.initialize( {
+      	width:1280,
       	history: true,
       	dependencies: [
-      		{ src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
+      		{ src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true },
+      		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
       	]
       } );
     </script>
