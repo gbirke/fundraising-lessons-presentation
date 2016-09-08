@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-html": "pug -o build src/pug/index.pug",
     "build-resources": "cp -r src/js build && cp -r src/css build && cp -r src/lib build && cp -r src/img build && cp -r src/plugin build",
-    "build": "npm build-resources && npm build-html",
+    "build": "npm run build-resources && npm run build-html",
     "watch": "pug -w -P -o build src/pug/index.pug",
     "deploy": "gh-pages -d build"
   },
