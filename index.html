@@ -41,18 +41,21 @@
         </section>
         <section>
           <h1>Why a rewrite?</h1>
+          <aside class="notes">
+            <p>Was not maintainable any more</p>
+          </aside>
         </section>
         <section>
           <h1>Scope</h1>
           <aside class="notes">
             <p>No new features, no DB changes, no client-side rewrite</p>
-            <p>We did some DB changes and it was a PITA because the DB classes were used by the backend application</p>
+            <p>We did some DB changes and it was a PITA because we immediately dropped some db columns used by the backend app</p>
             <p>We did the client-side rewrite and it cost us lots of time.</p>
           </aside>
         </section>
         <section>
           <h1>Use cases</h1>
-          <aside class="notes"> 
+          <aside class="notes">
             <p>Describe difference between user story and use case. The story "user wants to donate" is implemented in 3-4 use cases: Show donation form, add donation, display donation result, Paypal notification</p>
             <p>Mention use cases like membership application</p>
           </aside>
@@ -109,7 +112,7 @@
         </section>
         <section>
           <!-- TODO Add nice "Celebration" background?-->
-          <section> 
+          <section>
             <h2>Learning</h2>
             <p>Some people like regular celebration of progress.</p>
             <aside class="notes">Talk about feeling of "not making progress". Sprints have builtin "celebration points".</aside>
@@ -169,7 +172,7 @@
         </section>
         <section>
           <h1>Don't be a lone explorer</h1>
-          <aside class="notes"> 
+          <aside class="notes">
             <p>When trying out "new stuff" (eg. new patterns, libraries or languages), learn together.</p>
             <p>Do pair programming, intensive reviews, workshops and demos.</p>
             <p>More Ideas?</p>
@@ -190,14 +193,12 @@
             <h1>Verbosity is allowed</h1>
           </section>
           <section>
-            <h3>Terse</h3>
+            <h4>Terse</h4>
             <pre><code>foreach ( ['name', 'street', 'zip', 'city', 'email' ] as $field ) {
 	$setter = 'set' . ucfirst( $field )
 	$address->$setter( $_REQUEST[$field] );
 }</code></pre>
-          </section>
-          <section>
-            <h3>Verbose</h3>
+            <h4>Verbose</h4>
             <pre><code>$address->setName( $_REQUEST['name'] );
 $address->setStreet( $_REQUEST['street'] );
 $address->setZip( $_REQUEST['zip'] );
@@ -207,7 +208,7 @@ $address->setEmail( $_REQUEST['email'] );</code></pre>
           </section>
         </section>
         <section>
-          <h1>PHP 7.0 Type Hints!</h1>
+          <h1>PHP Scalar 7.0 Type Hints!</h1>
           <aside class="notes">
             <ul>
               <li>less errors from mismatched types</li>
@@ -223,9 +224,9 @@ $address->setEmail( $_REQUEST['email'] );</code></pre>
           <h1>Was it worth it?</h1>
         </section>
         <section>
-          <h1>Line count</h1>
+          <h1>"Code Metrics"</h1>
           <table>
-            <tr> 
+            <tr>
               <td>&nbsp;</td>
               <th align="right">Before</th>
               <th align="right">After</th>
@@ -240,7 +241,7 @@ $address->setEmail( $_REQUEST['email'] );</code></pre>
               <td align="right">14&numsp;503</td>
               <td align="right">13&numsp;938</td>
             </tr>
-            <tr> 
+            <tr>
               <th>LLOC</th>
               <td align="right">4&numsp;734</td>
               <td align="right">4&numsp;161</td>
@@ -275,7 +276,7 @@ $address->setEmail( $_REQUEST['email'] );</code></pre>
         <section>
           <h1>Questions?</h1>
           <p></p>
-          <p> <a href="https://gbirke.github.io/fundraising-lessons-presentation/">https://gbirke.github.io/fundraising-lessons-presentation/</a></p>
+          <p><a href="https://gbirke.github.io/fundraising-lessons-presentation/">http://goo.gl/ozZW5P</a></p>
         </section>
       </div>
     </div>
