@@ -182,6 +182,7 @@
           <h1>Review-First</h1>
           <aside class="notes">
             <p>Before working on your code, always check there's other code to be reviewed.</p>
+            <p>Make code pleasurable to review - small, freqent PRs, no "daily dump".</p>
           </aside>
         </section>
         <section>
@@ -193,13 +194,14 @@
             <h1>Verbosity is allowed</h1>
           </section>
           <section>
-            <h4>Terse</h4>
-            <pre><code>foreach ( ['name', 'street', 'zip', 'city', 'email' ] as $field ) {
+            <h3>Terse</h3>
+            <pre><code>foreach ( [ 'firstName', 'lastName', 'street', 'zip', 'city', 'email' ] as $field ) {
 	$setter = 'set' . ucfirst( $field )
 	$address->$setter( $_REQUEST[$field] );
 }</code></pre>
-            <h4>Verbose</h4>
-            <pre><code>$address->setName( $_REQUEST['name'] );
+            <h3>Verbose</h3>
+            <pre><code>$address->setFirstName( $_REQUEST['firstName'] );
+$address->setFirstName( $_REQUEST['lastName'] );
 $address->setStreet( $_REQUEST['street'] );
 $address->setZip( $_REQUEST['zip'] );
 $address->setCity( $_REQUEST['city'] );
@@ -258,6 +260,9 @@ $address->setEmail( $_REQUEST['email'] );</code></pre>
               <h4>After</h4><img src="img/phpmetric-maintainability-new.svg">
             </div>
           </div>
+          <aside class="notes">
+            <p>The graphics alone don't convey the drop in cyclopmatic complexity - 600 vs 100</p>
+          </aside>
         </section>
         <section><img src="img/sebastian_approved.jpg"></section>
         <section>
@@ -276,7 +281,7 @@ $address->setEmail( $_REQUEST['email'] );</code></pre>
         <section>
           <h1>Questions?</h1>
           <p></p>
-          <p><a href="https://gbirke.github.io/fundraising-lessons-presentation/">http://goo.gl/ozZW5P</a></p>
+          <p><a href="https://gbirke.github.io/fundraising-lessons-presentation/"> <span>https://gbirke.github.io/fundraising-lessons-presentation/</span><br><img src="img/presentation_qr_link.svg"></a></p>
         </section>
       </div>
     </div>
