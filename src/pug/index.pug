@@ -14,38 +14,40 @@ block content
 			li Our working mode
 			li Things we learnt when coding
 			li Outcome
-			
+
 	section
 		h1 Planning
-		
+
 	section
 		section
 			h1 Fundraising Fronted Application?
 		aside.notes Difference between Frontend and Backend
-	
+
 		section
 			h2 It's just a form, how hard can it be?
 			img(src="img/donation_screenshot.png", height="500")
-			
+
 	section
 		h1 Why a rewrite?
-		
+		aside.notes
+			p Was not maintainable any more
+
 	section
 		h1 Scope
 		aside.notes
 			p No new features, no DB changes, no client-side rewrite
-			p We did some DB changes and it was a PITA because the DB classes were used by the backend application
+			p We did some DB changes and it was a PITA because we immediately dropped some db columns used by the backend app
 			p We did the client-side rewrite and it cost us lots of time.
 
 	section
 		h1 Use cases
-		aside.notes 
+		aside.notes
 			p Describe difference between user story and use case. The story "user wants to donate" is implemented in 3-4 use cases: Show donation form, add donation, display donation result, Paypal notification
 			p Mention use cases like membership application
 
 	section
 		h1 Complexity extimates
-			
+
 	section
 		h1 Milestones
 		aside.notes
@@ -58,7 +60,7 @@ block content
 				li Break stories down into smaller tasks as needed
 				li Tasks are picked from the board
 				li No sprints, one big burndown chart, that got adjusted during the project
-			
+
 	section
 		section
 			h2 Learning
@@ -66,12 +68,12 @@ block content
 		section
 			p
 				img(src="img/youdontsay.png", height=400)
-	
+
 	section
 		section
 			h2 Learning
 			p Use cases describe functionality and neglect "infrastructure" effort.
-			
+
 		section
 			h3 Typical infrastructure concerns?
 			ul.fragment
@@ -82,25 +84,25 @@ block content
 				li External services
 				li Logging
 				li Deployment
-		
+
 		section
 			h2 Possible solution
 			p Keep infrastructure concerns in mind when breaking down tasks and create separate tickets for them.
-		
-		
+
+
 	section
 		// TODO Add nice "Celebration" background?
-		section 
+		section
 			h2 Learning
 			p Some people like regular celebration of progress.
 			aside.notes Talk about feeling of "not making progress". Sprints have builtin "celebration points".
-	
+
 		section
 			h1 Solutions?
 			aside.notes
 				p Distribute stories to more milestones?
 				p Pseudo-Sprints?
-					
+
 	section
 		h1 Communication
 		table
@@ -118,16 +120,16 @@ block content
 				td rarely
 		aside.notes
 			p This mode suited our peferred communication style and needs, other teams mqay have different needs.
-	
+
 	section
 		h2 Learning
 		p "Distributed" teams can work well and can self-organize/prioritize.
 		aside.notes "Distributed" means not working in the same place or at the same time
-	
+
 	section
 		h1 The collaboration commandments
 		aside.notes They're more of a suggestion, really ;-)
-	
+
 	section
 		h1 Encourage shared commitment
 		aside.notes
@@ -140,33 +142,33 @@ block content
 
 	section
 		h1 Don't be a lone explorer
-		aside.notes 
+		aside.notes
 			p When trying out "new stuff" (eg. new patterns, libraries or languages), learn together.
 			p Do pair programming, intensive reviews, workshops and demos.
 			p More Ideas?
-		
+
 	section
 		h1 Review-First
 		aside.notes
 			p Before working on your code, always check there's other code to be reviewed.
-		
+
 	section
 		h1 Use code for reviews
 		aside.notes Make followup-PRs instead of commenting.
-		
+
 	section
 		section
 			h1 Verbosity is allowed
-	
+
 		section
-			h3 Terse
+			h4 Terse
 			pre: code
 				| foreach ( ['name', 'street', 'zip', 'city', 'email' ] as $field ) {
 				|	$setter = 'set' . ucfirst( $field )
 				| 	$address->$setter( $_REQUEST[$field] );
 				| }
-		section
-			h3 Verbose
+
+			h4 Verbose
 			pre: code
 				| $address->setName( $_REQUEST['name'] );
 				| $address->setStreet( $_REQUEST['street'] );
@@ -174,9 +176,9 @@ block content
 				| $address->setCity( $_REQUEST['city'] );
 				| $address->setEmail( $_REQUEST['email'] );
 			aside.notes The latter is better because it eases refactoring (renaming of settings in the address object) and decouples HTML forms fields from entity field names.
-		
+
 	section
-		h1 PHP 7.0 Type Hints!
+		h1 PHP Scalar 7.0 Type Hints!
 		aside.notes
 			ul
 				li less errors from mismatched types
@@ -188,11 +190,11 @@ block content
 
 	section
 		h1 Was it worth it?
-			
+
 	section
-		h1 Line count
+		h1 "Code Metrics"
 		table
-			tr 
+			tr
 				td &nbsp;
 				th(align="right") Before
 				th(align="right") After
@@ -204,11 +206,11 @@ block content
 				th LOC
 				td(align="right") 14&numsp;503
 				td(align="right") 13&numsp;938
-			tr 
+			tr
 				th LLOC
 				td(align="right") 4&numsp;734
 				td(align="right") 4&numsp;161
-	
+
 	section
 		h2 PHPMetrics Maintainability
 		div.metrics-blocks
@@ -218,10 +220,10 @@ block content
 			div.metrics-new
 				h4 After
 				img(src="img/phpmetric-maintainability-new.svg")
-	
+
 	section
 		img(src="img/sebastian_approved.jpg")
-	
+
 	section
 		h1 Buzzword Time!
 		ul
@@ -233,9 +235,9 @@ block content
 			li Redux
 			li Microframework
 			li Symfony Developer Console
-	
+
 	section
 		h1 Questions?
 		p
-		p 
-			a(href="https://gbirke.github.io/fundraising-lessons-presentation/") https://gbirke.github.io/fundraising-lessons-presentation/
+		p
+			a(href="https://gbirke.github.io/fundraising-lessons-presentation/") http://goo.gl/ozZW5P
