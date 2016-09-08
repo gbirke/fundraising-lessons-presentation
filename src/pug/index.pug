@@ -161,16 +161,17 @@ block content
 			h1 Verbosity is allowed
 
 		section
-			h4 Terse
+			h3 Terse
 			pre: code
-				| foreach ( ['name', 'street', 'zip', 'city', 'email' ] as $field ) {
+				| foreach ( [ 'firstName', 'lastName', 'street', 'zip', 'city', 'email' ] as $field ) {
 				|	$setter = 'set' . ucfirst( $field )
 				| 	$address->$setter( $_REQUEST[$field] );
 				| }
 
-			h4 Verbose
+			h3 Verbose
 			pre: code
-				| $address->setName( $_REQUEST['name'] );
+				| $address->setFirstName( $_REQUEST['firstName'] );
+				| $address->setFirstName( $_REQUEST['lastName'] );
 				| $address->setStreet( $_REQUEST['street'] );
 				| $address->setZip( $_REQUEST['zip'] );
 				| $address->setCity( $_REQUEST['city'] );
